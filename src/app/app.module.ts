@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
-import { OfferComponent } from './offer/offer.component';
+// import { OfferComponent } from './offer/offer.component';
+// import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OfferComponent } from './offer/offer.component';
     NavbarComponent,
     LandingPageComponent,
     AboutComponent,
-    OfferComponent
+    // OfferComponent,
+    // LoginComponent
   ],
   imports: [
     BrowserModule,
