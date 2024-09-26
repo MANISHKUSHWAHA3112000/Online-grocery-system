@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
-// import { OfferComponent } from './offer/offer.component';
-// import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +15,13 @@ import { AboutComponent } from './about/about.component';
     NavbarComponent,
     LandingPageComponent,
     AboutComponent,
-    // OfferComponent,
-    // LoginComponent
+    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
