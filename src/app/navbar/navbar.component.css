@@ -1,41 +1,68 @@
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none; /* Removes any list-style like bullet points */
 }
 
-html {
-  font-size: 3px;
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
 }
 
-h3 {
-  color: orange;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
+/* Search Form */
 .search-form {
+  position: relative;
   width: 400px;
+  border-radius: 40px;
+  overflow: hidden; /* Ensures the button is contained within the input */
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
   height: 40px;
-  border-radius: 10px;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 40px;
+}
+
+.search-input::placeholder {
+  color: #888;
 }
 
 .btn-search {
-  background-color: rgb(249, 250, 250);
-  width: 60px;
+  background-color: #0b659af9;
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 0; /* Places the button at the right end */
 }
 
+.btn-search i {
+  color: white;
+}
+
+.btn-search:hover {
+  background-color: #0c4681; /* Color change on hover */
+}
+
+/* Header Styles */
 .header {
-  background: #f1f2f2;
-  color: #1b1b1b;
-  position: relative;
-  z-index: 2;
+  background: #0b659af9;
+  color: #f4f4f4;
 }
 
 .navbar {
@@ -48,117 +75,82 @@ a {
   min-height: 72px;
 }
 
-.navbar h3 a {
-  color: rgb(14, 102, 124);
-  font-size: 50px;
+/* Logo (h3) */
+.nav-logo {
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none; /* Removes underline */
+  font-weight: bold;
 }
 
+/* Remove unwanted dots/bullets from list items */
 .navbar ul {
   display: flex;
+  list-style: none; /* Ensures no bullets in the list */
 }
+
 .navbar ul li {
-  position: relative; /* Ensures the hover background covers the full li */
+  position: relative;
+  list-style: none; /* Explicitly remove bullets */
 }
+
 .navbar ul li a {
-  display: block;
-  padding: 10px 20px; /* Adjust padding to control the clickable area */
+  padding: 10px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  height: 100%; /* Ensures that the link stays within the navbar height */
-  line-height: 3;
 }
 
-.navbar ul li a:hover,
-.navbar ul li a:focus {
-  background-color: rgba(
-    19,
-    82,
-    97,
-    0.1
-  ); /* Adds a subtle background color on hover */
-  color: rgb(14, 102, 124); /* Text color change on hover */
-  border-radius: 1px;
+.navbar ul li a:hover {
+  background-color: rgba(224, 226, 226, 0.1);
+  color: #efefef;
 }
+
+/* Dropdown Styles */
 .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.nav-icon {
-    font-size: 17px; /* Adjust size as needed */
-    color: #1b1b1b; /* Change color as needed */
-    padding: 16px; /* Ensure enough space around the icon */
-}
-
-.dropdown-content {
-    display: none; /* Keep it hidden by default */
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 8px 10px;
-    text-decoration: none;
-    display: block;
-    
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Show the dropdown when hovering */
-}
-
-.dropdown:hover .nav-icon {
-    color: #ff6600; /* Change icon color on hover, adjust as needed */
-}
-
-
-/* Hamburger Menu */
-#navcheck,
-.nav-btn,
-.backdrop {
-  display: none;
-}
-
-.nav-btn {
-  position: fixed;
-  right: 24px;
-  top: 26px;
-  z-index: 99;
-}
-
-.nav-btn label {
-  cursor: pointer;
-}
-
-.nav-btn label span {
-  display: block;
-  width: 30px;
-  height: 3px; /* Adjusted for thicker lines */
-  background: #333; /* Changed color for visibility */
-  border-radius: 3px;
-  transition: all 0.3s ease;
   position: relative;
 }
 
-.nav-btn label span:not(:last-child) {
-  margin-bottom: 6px;
+.nav-icon {
+  color: white; /* Set the user icon color to white */
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-.nav-btn label:hover span {
-  background-color: #ff6600; /* Color change on hover */
+.nav-icon:hover {
+  color: #ff6600; /* Add hover effect to change user icon color */
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #0b659af9;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: white; /* Set dropdown text color to white */
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ff6600; /* Change background color on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hamburger Menu for mobile */
 @media (max-width: 992px) {
   .nav-menu {
-    display: none !important;
+    display: none;
   }
 
   .nav-btn {
@@ -167,51 +159,12 @@ a {
 
   .navbar ul li a {
     color: #303030;
-    width: 100%;
     display: block;
-    padding: 16px;
-  }
-
-  #navcheck {
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 72px;
-    height: 72px;
-    z-index: 999;
-    cursor: pointer;
-    margin: 0;
-    display: block;
-  }
-
-  input#navcheck:checked ~ .nav-btn label span:first-child {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  input#navcheck:checked ~ .nav-btn label span:last-child {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
-  input#navcheck:checked ~ .nav-btn label span:nth-child(2) {
-    opacity: 0;
   }
 
   input#navcheck:checked ~ .header .navbar .nav-menu {
-    display: block !important;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-  }
-
-  input#navcheck:checked ~ .backdrop {
-    position: absolute;
     display: block;
-    background-color: rgba(0, 0, 0, 0.36);
-    width: 100%;
-    height: calc(100% - 72px);
-    z-index: 1;
+    position: absolute;
+    background-color: #fff;
   }
 }
