@@ -1,10 +1,15 @@
+
+<!-- First Carousal on landing page -->
+ <div class="main">
 <div
   id="carouselExampleControlsNoTouching"
   class="carousel slide"
   data-bs-touch="false"
-  data-bs-interval="false"
+  data-bs-ride ="carousel"
+  data-bs-interval="2000"
 >
-  <div class="carousel-inner">
+<div id="carousel-outer"> 
+<div  class="carousel-inner">
     <div class="carousel-item active">
       <img
         src="https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -27,6 +32,7 @@
       />
     </div>
   </div>
+</div>  
   <button
     class="carousel-control-prev"
     type="button"
@@ -47,7 +53,10 @@
   </button>
 </div>
 
-<div class="container"></div>
+
+<!-- Shopping categories -->
+
+<div class="container">
 <div class="header">
   <h2>Categories</h2>
   <button class="view-all">View All</button>
@@ -102,4 +111,34 @@
     <p class="card-title">Books & Stationary</p>
   </div>
 </div>
-<app-offer></app-offer>
+</div>
+
+<!-- offers part  -->
+<div class="carousel-container">
+  <div class="header">
+    <h2>Offers</h2>
+  </div>
+  <div id="main">
+    <div class="offer-content">
+    <p >
+      Shop unbeatable deals at our online grocery store! Enjoy 20% off fresh produce, Buy 1 Get 1 Free on select items, and 30% off holiday essentials. New shoppers get 10% off their first order. Save up to 40% on bulk buys and enjoy free delivery on orders over ₹999. Start saving on your groceries today!</p>
+    </div>
+    <div class="offer-carousel">   
+    <div class="carousel">
+      <img
+        *ngFor="let image of images; let i = index"
+        [src]="image"
+        [class.active]="i === currentIndex"
+        alt="Image {{ i + 1 }}"
+        class="carousel-image"
+      />
+    </div>
+    <button class="prev-btn" (click)="prevImage()">&#10094;</button>
+    <button class="next-btn" (click)="nextImage()">&#10095;</button>
+  </div> 
+  </div>
+</div>
+
+
+</div>
+
