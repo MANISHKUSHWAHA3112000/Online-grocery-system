@@ -1,0 +1,90 @@
+/* Footer Container Styles */
+.footer-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Google Map as Background */
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contact Us Overlay */
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f7f4f4; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contact Title */
+.contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #f7c843; /* Gold accent for title */
+}
+
+/* Contact Item Styles */
+.contact-item {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Link styles for Email and Phone */
+.contact-item a {
+    color: #f7f4f4;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #f7c843; /* Gold color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        height: 300px;
+    }
+
+    .contact-title {
+        font-size: 1.2rem;
+    }
+
+    .contact-item {
+        font-size: 0.9rem;
+    }
+}
