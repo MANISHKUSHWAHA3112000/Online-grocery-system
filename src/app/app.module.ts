@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { OfferComponent } from './offer/offer.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     LandingPageComponent,
     AboutComponent,
     OfferComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
