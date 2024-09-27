@@ -6,6 +6,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductComponent } from './product/product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +16,18 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     LandingPageComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    ProductComponent,
+   
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+   
+   
     
   ],
   providers: [],
