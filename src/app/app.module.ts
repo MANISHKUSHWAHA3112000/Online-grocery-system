@@ -8,6 +8,9 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PaginationComponent } from './pagination/pagination.component';
+// import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { ProductComponent } from './product/product.component';
     LandingPageComponent,
     AboutComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    PaginationComponent
+    
    
    
     
@@ -27,6 +32,7 @@ import { ProductComponent } from './product/product.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxPaginationModule
    
    
     

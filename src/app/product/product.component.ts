@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
@@ -7,6 +7,10 @@ import { Product } from '../product.model';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  
+  itemsPerpage = 5;
+  currentpage = 1;
+
   products = [
     {
       name: 'ProV Select California Almonds (Badami) : 1 kg',
@@ -21,8 +25,71 @@ export class ProductComponent implements OnInit {
       name: 'ProV Select California Almonds (Badami) : 1 kg',
       mrp: 1349,
       price: 679,
-      quantity: 1, // Quantity in kg
+      quantity: 1, 
       imageUrl: "../assets/Images/catego_grocery.jpg",
+      inCart: false, 
+      cartQuantity: 0 
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
+      inCart: false, // To check if the product is in the cart
+      cartQuantity: 0 // To track quantity added to the cart
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
+      inCart: false, // To check if the product is in the cart
+      cartQuantity: 0 // To track quantity added to the cart
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
+      inCart: false, // To check if the product is in the cart
+      cartQuantity: 0 // To track quantity added to the cart
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
+      inCart: false, // To check if the product is in the cart
+      cartQuantity: 0 // To track quantity added to the cart
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
+      inCart: false, // To check if the product is in the cart
+      cartQuantity: 0 // To track quantity added to the cart
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
+      inCart: false, // To check if the product is in the cart
+      cartQuantity: 0 // To track quantity added to the cart
+    },
+    {
+      name: 'ProV Select California Almonds (Badami) : 1 kg',
+      mrp: 1349,
+      price: 679,
+      quantity: 1, // Quantity in kg
+      imageUrl: "../assets/Images/almonds.jpg",
       inCart: false, // To check if the product is in the cart
       cartQuantity: 0 // To track quantity added to the cart
     },
@@ -38,9 +105,14 @@ export class ProductComponent implements OnInit {
     // Add more products here
   ];
 
-  constructor() {}
+  constructor() {
+   
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    
+  }
 
   addToCart(product: any) {
     product.inCart = true; // Mark the product as in the cart
@@ -63,4 +135,15 @@ export class ProductComponent implements OnInit {
     product.inCart = false; // Mark the product as not in the cart
     product.cartQuantity = 0; // Reset the cart quantity
   }
+
+
+  get paginationData(){
+    const start = (this.currentpage - 1) * this.itemsPerpage;
+    const end = start + this.itemsPerpage;
+
+    return this.products.slice(start , end);
+  }
+  changePage(page: number) {
+    this.currentpage = page;
+    }
 }

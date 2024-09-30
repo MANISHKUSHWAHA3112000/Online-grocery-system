@@ -1,19 +1,36 @@
 <div class="product-container">
-  <div class="product" *ngFor="let product of products">
-    <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image" />
+  <div class="product" *ngFor="let product of paginationData">
+    <img
+      [src]="product.imageUrl"
+      alt="{{ product.name }}"
+      class="product-image"
+    />
     <div class="product-details">
       <h4>{{ product.name }}</h4>
       <div class="price">
-        <span class="mrp">MRP: <del>₹{{ product.mrp }}</del></span>
+        <span class="mrp"
+          >MRP: <del>₹{{ product.mrp }}</del></span
+        >
         <span class="dmart-price">₹{{ product.price }}</span>
       </div>
       <p>Inclusive of all taxes</p>
-      <p>{{ product.quantity }} kg (₹{{ (product.price / product.quantity).toFixed(2) }} / 1 gm)</p>
+      <p>
+        {{ product.quantity }} kg (₹{{
+          (product.price / product.quantity).toFixed(2)
+        }}
+        / 1 gm)
+      </p>
 
       <!-- Add-to-cart and quantity controls container -->
       <div class="add-to-cart-container">
         <!-- If the product is not in the cart, show "Add to Cart" button -->
-        <button class="add-to-cart" *ngIf="!product.inCart" (click)="addToCart(product)"><i class="fas fa-shopping-cart"></i>  ADD TO CART</button>
+        <button
+          class="add-to-cart"
+          *ngIf="!product.inCart"
+          (click)="addToCart(product)"
+        >
+          <i class="fas fa-shopping-cart"></i> ADD TO CART
+        </button>
 
         <!-- If the product is in the cart, show quantity controls -->
         <div *ngIf="product.inCart" class="quantity-controls">
@@ -27,3 +44,9 @@
     </div>
   </div>
 </div>
+<app-pagination
+  [totalItems]="products.length"
+  [itemsPerPage]="itemsPerpage"
+  [currentPage]="currentpage"
+  (onClick)="changePage($event)"
+></app-pagination>
