@@ -1,0 +1,33 @@
+<!-- <p>categories works!</p> -->
+<!-- <ul>
+    <li *ngFor="let category of categories" (click)="onSelectCategory(category)">
+      {{ category }}
+    </li>
+</ul> -->
+<!-- <div class="categories-container">
+    <div class="category-card" *ngFor="let category of categories" (click)="onSelectCategory(category)">
+      <h3>{{ category }}</h3>
+    </div>
+  </div>
+   -->
+
+   <div class="main-container">
+    <!-- Left side: Category cards -->
+    <div class="categories-container">
+      <div class="category-card" *ngFor="let category of categories" (click)="onSelectCategory(category)">
+        <img src="assets/icons/{{category | lowercase}}.png" alt="{{category}}" class="category-icon" />
+        <h3>{{ category }}</h3>
+      </div>
+    </div>
+  
+    <!-- Right side: Products -->
+    <div class="products-container">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <div class="image-wrapper">
+          <img [src]="product.img" alt="{{product.name}}" class="product-image">
+        </div>
+        <h4>{{ product.name }}</h4>
+      </div>
+    </div>
+  </div>
+  

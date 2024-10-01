@@ -1,0 +1,165 @@
+/* Container for the categories to make it vertically aligned and responsive */
+/* Container for the categories to stack them vertically */
+/* Main container to hold both the category list and the product area */
+/* .main-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  } */
+  .main-container {
+    display: flex;
+    width: 100%;
+    height: 20em;
+    padding: 20px;
+    box-sizing: border-box;
+    height: calc(100vh - 100px); /* Make sure the main container fits the screen height */
+  }
+  /* Container for the categories, aligned to the left with fixed width */
+/* Container for the categories, aligned to the left with fixed width and scrolling */
+.categories-container {
+    width: 250px; /* Fixed width for the category sidebar */
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd; /* Optional: border to separate the two sections */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add scroll when content overflows */
+    max-height: calc(100vh - 100px); /* Adjust height based on screen size (adjust based on your header/footer) */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  /* Each category card */
+  .category-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .category-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Hover effect to lift the card slightly */
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hide scrollbar in WebKit browsers */
+  .categories-container::-webkit-scrollbar {
+    width: 0px; /* Set scrollbar width */
+  }
+  
+  .categories-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Customize scrollbar thumb color */
+    border-radius: 10px; /* Make scrollbar rounded */
+  }
+  
+  .categories-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Customize scrollbar track */
+  }
+  
+
+
+  
+/* Container for the product grid (right side) */
+.products-container {
+  flex: 1; /* Take up the remaining space */
+  padding: 20px;
+  background-color: #f8f8f8;
+    border-right: 1px solid #ddd; /* Optional: border to separate the two sections */
+    
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Add scroll when content overflows */
+  max-height: calc(100vh - 100px); /* Make sure the products container fits the screen height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adaptive grid layout for products */
+  gap: 20px; /* Space between products */
+}
+
+/* Each product card */
+.product-card {
+  background-color: #d4c0c0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 12rem;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the image fills the box without distortion */
+}
+/* Hide scrollbar in WebKit browsers */
+  .products-container::-webkit-scrollbar {
+    width: 0px; /* Set scrollbar width */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .categories-container {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller grid on small screens */
+  }
+
+  .category-card {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .categories-container {
+    width: 150px; /* Adjust width for mobile */
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller grid on mobile */
+  }
+
+  .category-card {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

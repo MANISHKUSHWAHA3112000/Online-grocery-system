@@ -5,13 +5,15 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 const routes: Routes = [  
   { path: '', component: LandingPageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'product', component: ProductComponent }
+  { path: 'product', component: ProductComponent },
+  { path: 'categories', component: CategoriesComponent }
 
   
 ];

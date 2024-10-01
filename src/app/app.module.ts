@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ProductComponent } from './product/product.component';
     LandingPageComponent,
     AboutComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    CategoriesComponent
    
    
     
