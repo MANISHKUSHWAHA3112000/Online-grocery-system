@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  address: string;
-  email: string;
-  phone: string;
+  // address: string;
+  // email: string;
+  // phone: string;
 
-  constructor() {
-    // Example dynamic values
-    this.address = "123 Main Street, City, Country";
-    this.email = "contact@domain.com";
-    this.phone = "+123 456 7890";
-  }
+  // constructor() {
+  //   // Example dynamic values
+  //   this.address = "123 Main Street, City, Country";
+  //   this.email = "contact@domain.com";
+  //   this.phone = "+123 456 7890";
+  // }
 }

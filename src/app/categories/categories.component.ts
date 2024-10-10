@@ -1,5 +1,5 @@
 // import { Component } from '@angular/core';
-// import {Router} from'@angular/router';
+
 
 // @Component({
 //   selector: 'app-categories',
@@ -16,6 +16,7 @@
 //   }
 // }
 import { Component } from '@angular/core';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -39,5 +40,10 @@ export class CategoriesComponent {
   onSelectCategory(category: string) {
     this.filteredProducts = this.products.filter(product => product.category === category);
   }
+
+  // // Navigate to product page when a product is clicked
+  // onSelectProduct(productName: string) {
+  //   // this.router.navigate(['/products', productName]); // Define your route and pass product name or ID herw
+  // }
 }
 

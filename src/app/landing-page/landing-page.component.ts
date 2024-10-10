@@ -34,4 +34,15 @@ export class LandingPageComponent implements OnInit, OnDestroy {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
+  address: string;
+  email: string;
+  phone: string;
+
+  constructor() {
+    // Example dynamic values
+    this.address = "123 Main Street, City, Country";
+    this.email = "contact@domain.com";
+    this.phone = "+123 456 7890";
+  }
+
 }

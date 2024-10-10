@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../product.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -7,6 +8,9 @@ import { Product } from '../product.model';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  
+
+
   
   itemsPerpage = 5;
   currentpage = 1;
@@ -146,4 +150,9 @@ export class ProductComponent implements OnInit {
   changePage(page: number) {
     this.currentpage = page;
     }
+
+
+    
+    
+
 }

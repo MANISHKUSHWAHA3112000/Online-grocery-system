@@ -1,96 +1,64 @@
-/* Footer Container Styles */
-.footer-container {
-    position: relative;
-    height: 250px;
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
     width: 100%;
-    /* margin-top: 1em; */
-    /* padding-top: 40px; */
-}
-
-/* Google Map as Background */
-.map-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-    /* padding-top: 40px; */
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Contact Us Overlay */
-.contact-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    height: 2em;
+  }
+  
+  .footer-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: #f7f4f4; /* White text for contrast */
-    text-align: center;
-    /* padding-top: 40px; */
-    /* margin-top: 01em; */
-}
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 7px;
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-media a {
+    display: inline-block;
+  }
 
-/* Contact Title */
-.contact-title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #f7c843; /* Gold accent for title */
-}
-
-/* Contact Item Styles */
-.contact-item {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-/* Link styles for Email and Phone */
-.contact-item a {
-    color: #f7f4f4;
+  .footer-links {
+    display: flex;
+    align-items: left;
+    gap: 30px;
+  }
+  
+  .link {
+    color: #fff;
     text-decoration: none;
-}
-
-.contact-item a:hover {
-    color: #f7c843; /* Gold color on hover */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .contact-title {
-        font-size: 1.5rem;
+    font-size: 14px;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
     }
-
-    .contact-item {
-        font-size: 1rem;
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
     }
-}
-
-@media (max-width: 480px) {
-    .footer-container {
-        height: 300px;
-    }
-
-    .contact-title {
-        font-size: 1.2rem;
-    }
-
-    .contact-item {
-        font-size: 0.9rem;
-    }
-}
+  }
 
 
 
@@ -105,3 +73,4 @@
 
 
 
+  

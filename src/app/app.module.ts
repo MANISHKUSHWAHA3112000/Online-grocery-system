@@ -9,6 +9,11 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { PaginationComponent } from './pagination/pagination.component';
+// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+// import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 
 
 @NgModule({
@@ -19,7 +24,9 @@ import { CategoriesComponent } from './categories/categories.component';
     AboutComponent,
     FooterComponent,
     ProductComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    PaginationComponent
+  
    
    
     
@@ -29,6 +36,7 @@ import { CategoriesComponent } from './categories/categories.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    // FontAwesomeModule,
    
    
     
@@ -36,4 +44,8 @@ import { CategoriesComponent } from './categories/categories.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  // constructor(library: FaIconLibrary) {
+  //   library.addIcons(faFacebook, faTwitter, faInstagram);
+  // }
+}

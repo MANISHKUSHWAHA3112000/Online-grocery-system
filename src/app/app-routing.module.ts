@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'product', component: ProductComponent },
   { path: 'categories', component: CategoriesComponent }
+  // { path: '/product/:name', component: ProductComponent }
 
   
 ];
@@ -23,3 +24,21 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
